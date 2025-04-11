@@ -1,0 +1,6 @@
+1:jacob:dog:australian_shepherd:4:female:cats:Zelda is a perfect dog for anyone who needs a little bit of action in their life.:Zelda:Jacob Lee:jacob@example.com
+2:lea:cat:siamese:2:male:dogs,cats:Minou is a calm, cuddly cat that enjoys cuddles and climbing.:Minou:Lea Beaudry:beaudry@example.com
+3:jacob:cat:maine_coon:5:male:cats:Milo is a big, fluffy cuddle bug who enjoys window watching and soft blankets.:Milo:Jacob Lee:jacob@example.com
+4:emily:dog:golden_retriever:8:female:dogs,cats,children:Luna is a playful, sweet lab who loves fetch and belly rubs.:Luna:Emily Johnson:emily@example.com
+5:olivia:dog:beagle:2:male:dogs,children:Biscuit is a curious and friendly pup who loves sniffing everything and cuddling up on rainy days.:Biscuit:Olivia Chen:olivia@example.com
+6:daniel:cat:ragdoll:0.5:female:cats:Mochi is a fluffy ball of energy who loves chasing strings and curling up in sunbeams for naps.:Mochi:Daniel Rivera:daniel@example.com

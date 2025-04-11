@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/head.ejs') %>
+<body>
+
+
+<%- include('partials/header.ejs') %>
+
+
+<div class="container-fluid">
+    <div class="row">
+        <!-- MENU -->
+        <%- include('partials/menu.ejs', { active: 'home' }) %>
+        <!-- CONTENT AREA -->
+        <main class="col-md-9 ms-sm-auto col-lg-10 p-4">
+            <h1>Welcome to Adopt A Pet!</h1>
+            <p>Looking to find a new furry friend? Adopt A Pet is here to help!
+                Our website is designed to connect loving families with cats and
+                dogs in need of a forever home. Whether you’re searching for a playful puppy,
+                a gentle senior dog, a curious kitten, or a cuddly adult cat, we make the adoption process
+                simple and convenient.<br> At Adopt A Pet, we believe every animal deserves love, care, and a safe home.
+                Start your adoption journey today and change a life—maybe even your own! 🏡🐶🐱</p>
+        </main>
+    </div>
+</div>
+<!-- FOOTER -->
+<%- include('partials/footer.ejs') %>
+
+</body>
+</html>
