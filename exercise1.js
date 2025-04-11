@@ -1,5 +1,7 @@
 const http = require('http');
 const url = require('url');
+const fs = require('fs');
+const path = require('path');
 
 // A) findSummation
 function findSummation(N = 1) {
@@ -34,7 +36,7 @@ function findAverageAndMedian(arr) {
     const mid = Math.floor(sorted.length / 2);
     const median = sorted.length % 2 === 0 ?
         (sorted[mid - 1] + sorted[mid]) / 2 : sorted[mid];
-    return { average, median };
+    return {average, median};
 }
 
 // D) find4Digits
@@ -49,25 +51,36 @@ function find4Digits(str) {
 // Start server
 http.createServer((req, res) => {
     const parsedUrl = url.parse(req.url, true);
-    const path = parsedUrl.pathname;
+    const pathname = parsedUrl.pathname;
     const query = parsedUrl.query;
 
-    res.writeHead(200, { 'Content-Type': 'text/html' });
 
-    if (path === '/findSummation') {
+
+    if (pathname === '/findSummation') {
         const result = findSummation(query.N);
         res.end(`Result: ${result}`);
-    } else if (path === '/uppercaseFirstandLast') {
+    } else if (pathname === '/uppercaseFirstandLast') {
         const result = uppercaseFirstandLast(query.str);
         res.end(`Result: ${result}`);
-    } else if (path === '/findAverageAndMedian') {
+    } else if (pathname === '/findAverageAndMedian') {
         const result = findAverageAndMedian(query.arr?.split(','));
         res.end(`Result: ${JSON.stringify(result)}`);
-    } else if (path === '/find4Digits') {
+    } else if (pathname === '/find4Digits') {
         const result = find4Digits(query.str);
         res.end(`Result: ${result}`);
+    } else if (pathname === '/') {
+        fs.readFile(path.join(__dirname, 'exercise1.html'), (err, data) => {
+            if (err) {
+                res.writeHead(500);
+                res.end("Error loading HTML file");
+            } else {
+                res.writeHead(200, {'Content-Type': 'text/html'});
+                res.end(data);
+            }
+        });
     } else {
-        res.end(`<h2>Use the form to test functions</h2>`);
+        res.writeHead(404);
+        res.end(`404 - Page not found`);
     }
 }).listen(3000);
 

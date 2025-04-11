@@ -1,10 +1,33 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Function Tester</title>
 </head>
 <body>
-$END$
+<h2>Find Summation</h2>
+<form action="/findSummation" method="GET">
+    N: <input type="number" name="N">
+    <button type="submit">Submit</button>
+</form>
+
+<h2>Uppercase First and Last Letters</h2>
+<form action="/uppercaseFirstandLast" method="GET">
+    String: <input type="text" name="str">
+    <button type="submit">Submit</button>
+</form>
+
+<h2>Find Average and Median</h2>
+<form action="/findAverageAndMedian" method="GET">
+    Numbers (comma-separated): <input type="text" name="arr">
+    <button type="submit">Submit</button>
+</form>
+
+<h2>Find 4-Digit Number</h2>
+<form action="/find4Digits" method="GET">
+    Numbers (space-separated): <input type="text" name="str">
+    <button type="submit">Submit</button>
+</form>
 </body>
 </html>
